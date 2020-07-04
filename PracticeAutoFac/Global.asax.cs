@@ -20,6 +20,7 @@ namespace PracticeAutoFac
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
+            //from: https://www.youtube.com/watch?v=lucjChMhTWA
             var builder = new ContainerBuilder();
             builder.RegisterControllers(typeof (MvcApplication).Assembly);
             builder.RegisterType<Person>().AsSelf();
